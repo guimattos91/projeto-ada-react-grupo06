@@ -36,7 +36,7 @@ const TasksComponent: React.FC<ITaskComponentProps> = ({
             onClick={() => setEditModeTitle(true)}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => {
+            onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
               if (e.key === 'Enter') {
                 setEditModeTitle(true)
               }
@@ -50,7 +50,9 @@ const TasksComponent: React.FC<ITaskComponentProps> = ({
             // eslint-disable-next-line jsx-a11y/no-autofocus
             autoFocus
             onBlur={() => setEditModeTitle(false)}
-            onChange={(e) => updateTaskTitle(task.id, e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              updateTaskTitle(task.id, e.target.value)
+            }
             defaultValue={initialTitle}
             className="me-1"
           />
@@ -66,7 +68,7 @@ const TasksComponent: React.FC<ITaskComponentProps> = ({
             onClick={() => setEditModeContent(true)}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => {
+            onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
               if (e.key === 'Enter') {
                 setEditModeContent(true)
               }
@@ -80,7 +82,9 @@ const TasksComponent: React.FC<ITaskComponentProps> = ({
             // eslint-disable-next-line jsx-a11y/no-autofocus
             autoFocus
             onBlur={() => setEditModeContent(false)}
-            onChange={(e) => updateTask(task.id, e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              updateTask(task.id, e.target.value)
+            }
             defaultValue={initialContent}
           />
         )}

@@ -45,6 +45,13 @@ export const GlobalStyle = createGlobalStyle`
       padding:0;
     }
 
+    input{
+      width: 100%;
+      border-radius: 5px;
+      padding: 0.5rem;
+      border: 1px solid #ced4da;
+    }
+
 `
 
 export const InputStyled = styled.input`

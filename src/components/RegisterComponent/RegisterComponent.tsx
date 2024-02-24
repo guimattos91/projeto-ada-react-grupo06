@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { memo, useCallback, useState } from 'react'
 
 import {
@@ -47,7 +46,7 @@ const RegisterComponent: React.FC<ILoginComponentProps> = ({
       <form onSubmit={handleSubmit}>
         <label htmlFor="nome">
           Nome:
-          <InputStyled
+          <input
             type="text"
             id="nome"
             name="nome"
@@ -63,7 +62,7 @@ const RegisterComponent: React.FC<ILoginComponentProps> = ({
         </label>
         <label htmlFor="email">
           E-mail:
-          <InputStyled
+          <input
             type="email"
             id="email"
             name="email"
@@ -79,7 +78,7 @@ const RegisterComponent: React.FC<ILoginComponentProps> = ({
         </label>
         <label htmlFor="password">
           Password:
-          <InputStyled
+          <input
             type="password"
             id="senha"
             name="senha"

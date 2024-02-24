@@ -1,10 +1,8 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import { memo, useCallback, useContext, useEffect, useState } from 'react'
+import { memo, useEffect } from 'react'
 
 import {
   HasRegisterButtonStyled,
   InputContainer,
-  InputStyled,
   GlobalButtonStyled,
 } from 'style/style'
 
@@ -33,7 +31,7 @@ const LoginComponent: React.FC<ILoginComponentProps> = ({
       <form onSubmit={handleLogin}>
         <label htmlFor="emailLogin">
           E-mail:
-          <InputStyled
+          <input
             type="email"
             id="emailLogin"
             name="emailLogin"
@@ -44,7 +42,7 @@ const LoginComponent: React.FC<ILoginComponentProps> = ({
         </label>
         <label htmlFor="senhaLogin">
           Password:
-          <InputStyled
+          <input
             type="password"
             id="senhaLogin"
             name="senhaLogin"
@@ -53,7 +51,7 @@ const LoginComponent: React.FC<ILoginComponentProps> = ({
             required
           />
         </label>
-        {error && <label style={{ color: 'red' }}>{error}</label>}
+        {error && <span style={{ color: 'red' }}>{error}</span>}
         <GlobalButtonStyled type="submit">Enviar</GlobalButtonStyled>
       </form>
       <HasRegisterButtonStyled type="button" onClick={onRegisterButtonClick}>
