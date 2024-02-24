@@ -3,7 +3,6 @@ import { memo, useCallback, useState } from 'react'
 import {
   HasRegisterButtonStyled,
   InputContainer,
-  InputStyled,
   GlobalButtonStyled,
 } from 'style/style'
 

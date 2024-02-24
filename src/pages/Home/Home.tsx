@@ -28,9 +28,8 @@ const Home: React.FC = () => {
   return (
     <>
       <Header />
-      <main className="d-flex flex-column align-items-center">
-        <h2>Seja Bem vindo, {user?.nome}</h2>
-        <ColumnsContainerComponent />
+      <main className="d-flex flex-column align-items-center mx-3">
+        <h2>Seja Bem vindo, {user?.nome}</h2> <ColumnsContainerComponent />
       </main>
     </>
   )

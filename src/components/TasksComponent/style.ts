@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const TaskDivContainer = styled.div`
   background-color: #0047a1;
   padding: 1rem;
+  margin-bottom: 0.5em;
 `
 export const HeaderDiv = styled.div`
   display: flex;

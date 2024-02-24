@@ -8,7 +8,7 @@ import { generateId } from 'helpers'
 
 import { ColumnType, Id, TaskType } from 'types'
 
-import { ColumnDivContainer } from './style'
+import { ColumnDivContainer, InsideColumnDiv } from './style'
 
 const ColumnsContainerComponent: React.FC = () => {
   const [columns, setColumns] = useState<ColumnType[]>([])
@@ -17,7 +17,7 @@ const ColumnsContainerComponent: React.FC = () => {
   const createNewColumn: () => void = () => {
     const columnToAdd: ColumnType = {
       id: generateId(),
-      title: `Column ${columns.length + 1}`,
+      title: 'Grupo de Tarefas',
     }
 
     setColumns([...columns, columnToAdd])
@@ -40,9 +40,9 @@ const ColumnsContainerComponent: React.FC = () => {
   const createTask: (taskId: Id) => void = (taskId: Id) => {
     const newTask: TaskType = {
       id: generateId(),
-      content: `Task ${tasks.length + 1}`,
+      content: 'Escreva sua tarefa',
       columnId: taskId,
-      title: `Task ${tasks.length + 1}`,
+      title: 'Nova Tarefa',
     }
     setTasks([...tasks, newTask])
   }
@@ -75,8 +75,8 @@ const ColumnsContainerComponent: React.FC = () => {
   return (
     <ColumnDivContainer>
       <div className="m-auto d-flex flex-column">
-        <div className="d-flex justify-content-center">
-          <div className="d-flex gap-2">
+        <InsideColumnDiv>
+          <div className="d-flex g-2">
             {columns &&
               columns.map((col) => (
                 <ColumnComponent
@@ -94,7 +94,7 @@ const ColumnsContainerComponent: React.FC = () => {
                 />
               ))}
           </div>
-        </div>
+        </InsideColumnDiv>
         <GlobalButtonStyled
           type="button"
           onClick={() => createNewColumn()}

@@ -7,7 +7,7 @@ import TasksComponent from 'components/TasksComponent'
 
 import { Id, TaskType } from 'types'
 
-import { ButtonNoStyle, ColumnDivContainer } from './style'
+import { ButtonNoStyle, ColumnDivContainer, ColumnDivIntern } from './style'
 
 interface IColumnComponentProps {
   id: Id
@@ -68,7 +68,7 @@ const ColumnComponent: React.FC<IColumnComponentProps> = ({
           <IoMdCloseCircleOutline color="white" size={30} />
         </ButtonNoStyle>
       </div>
-      <div className="d-flex flex-grow-1 flex-column g-2">
+      <ColumnDivIntern>
         {tasks.map((task) => (
           <TasksComponent
             task={task}
@@ -77,7 +77,7 @@ const ColumnComponent: React.FC<IColumnComponentProps> = ({
             updateTaskTitle={updateTaskTitle}
           />
         ))}
-      </div>
+      </ColumnDivIntern>
 
       <WhiteGlobalButtonStyled
         type="button"
