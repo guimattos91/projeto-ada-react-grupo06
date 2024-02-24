@@ -76,7 +76,7 @@ const ColumnsContainerComponent: React.FC = () => {
     <ColumnDivContainer>
       <div className="m-auto d-flex flex-column">
         <InsideColumnDiv>
-          <div className="d-flex g-2">
+          <div className="d-flex mx-2">
             {columns &&
               columns.map((col) => (
                 <ColumnComponent

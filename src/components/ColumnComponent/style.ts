@@ -9,6 +9,7 @@ export const ColumnDivContainer = styled.div`
   border-radius: 15px;
   background-color: #00234f;
   padding: 2rem;
+  margin-right: 5px;
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
